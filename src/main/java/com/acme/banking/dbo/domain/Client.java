@@ -9,6 +9,11 @@ public class Client {
     private Collection<Account> accounts = new ArrayList<>(); //TODO
 
     public Client(int id, String name) {
+        try {
+            Thread.sleep(50);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         if (id == 0) throw new IllegalArgumentException("id error");
         if (name == null) throw new IllegalArgumentException("name error");
         this.id = id;
