@@ -29,7 +29,7 @@ class SavingAccountTest {
     void shouldNotSaveClientWhenSavingAccountZero() {
         final int clientId = 1;
         final int dummySavingAccountId = 0;
-        final String dummyClientName = "Elon Musk";
+        final String dummyClientName = "Test Name";
         final double dummyAmount = 2.2;
 
         Client client = new Client(clientId, dummyClientName);
@@ -41,7 +41,7 @@ class SavingAccountTest {
     void shouldNotSaveClientWhenAmountZero() {
         final int clientId = 1;
         final int dummySavingAccountId = 0;
-        final String dummyClientName = "Elon Musk";
+        final String dummyClientName = "Test Name";
         final double dummyAmount = 0.0;
 
         Client client = new Client(clientId, dummyClientName);
@@ -51,7 +51,7 @@ class SavingAccountTest {
     @Test
     void shouldNotCreateClientWhenIdClientIsZero() {
         final int clientId = 0;
-        final String clientName = "Elon Musk";
+        final String clientName = "Test Name";
 
         assertThrows(IllegalArgumentException.class, () -> new Client(clientId, clientName));
     }
