@@ -10,6 +10,7 @@ public class Client {
 
     public Client(int id, String name) {
         if (id == 0) throw new IllegalArgumentException("id error");
+        if (name == null) throw new IllegalArgumentException("name error");
         this.id = id;
         this.name = name;
     }
