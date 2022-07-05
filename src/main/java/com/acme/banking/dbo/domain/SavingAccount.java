@@ -6,6 +6,11 @@ public class SavingAccount implements Account {
     private double amount;
 
     public SavingAccount(int id, Client client, double amount) {
+        if (id == 0) throw new IllegalArgumentException("id error");
+        if (client == null) throw new IllegalArgumentException("client error");
+        if (amount == 0) throw new IllegalArgumentException("amount error");
+
+
         this.id = id;
         this.client = client;
         this.amount = amount;
